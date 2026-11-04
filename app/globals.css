@@ -36,3 +36,26 @@ html { background: #f7faf8; }
 body { margin: 0; background: #f7faf8; color: var(--foreground); font-family: Arial, Helvetica, sans-serif; }
 button, input { font: inherit; }
 button { cursor: pointer; }
+
+.screen {
+  display: flex;
+  min-height: calc(100vh - 78px);
+  flex-direction: column;
+  gap: 18px;
+  overflow-x: hidden;
+  padding: 28px 20px 112px;
+}
+
+.screen h1, .screen h2, .screen p { margin: 0; }
+.screen input { min-width: 0; }
+.section-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+
+@media (min-width: 640px) {
+  .screen { padding: 32px 26px 112px; gap: 20px; }
+}
+
+@media (max-height: 560px) {
+  .screen { padding-top: 18px; gap: 12px; }
+  .screen h1 { font-size: 1.35rem; }
+  .screen section { padding-top: 14px; padding-bottom: 14px; }
+}
